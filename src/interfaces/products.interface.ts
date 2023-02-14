@@ -11,3 +11,9 @@ export interface Iuser {
   level: number;
   password: string;
 }
+
+export interface IjwtPayload {
+  username: string;
+  vocation: string;
+  level: number;
+}
