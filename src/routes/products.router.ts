@@ -5,8 +5,8 @@ const { ProductsController } = index;
 
 const productsRouter = Router();
 
-productsRouter.post('/products', ProductsController.insert);
+productsRouter.post('/', ProductsController.insert);
 
-productsRouter.get('/products', ProductsController.read);
+productsRouter.get('/', ProductsController.read);
 
 export default productsRouter;
