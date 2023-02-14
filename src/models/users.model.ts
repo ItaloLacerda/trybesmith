@@ -11,10 +11,9 @@ class UsersModel {
       .join(', ');
   
     const [{ insertId }] = await connection.execute<ResultSetHeader>(
-      `INSERT INTO Trybesmith.products (${columns}) VALUE (${placeholders})`,
+      `INSERT INTO Trybesmith.users (${columns}) VALUE (${placeholders})`,
       [...Object.values(newUser)],
     );
-    
     return insertId;
   }
 }
