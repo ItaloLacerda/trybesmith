@@ -9,6 +9,12 @@ class ProductsService {
 
     return result;
   }
+
+  static async read() {
+    const result = await ProductsModel.read();
+
+    return result;
+  }
 }
 
 export default ProductsService;
