@@ -1,4 +1,4 @@
-import { ResultSetHeader } from 'mysql2/promise';
+import { ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import { Iproduct } from '../interfaces/products.interface';
 import connection from './connection';
 
@@ -16,6 +16,14 @@ class ProductsModel {
     );
   
     return insertId;
+  }
+
+  static async read() {
+    const [result] = await connection.execute<RowDataPacket[]>(
+      'SELECT * FROM Trybesmith.products',
+    );
+
+    return result;
   }
 }
 
