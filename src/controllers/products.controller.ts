@@ -11,6 +11,12 @@ class ProductsController {
 
     return res.status(201).json({ id: response, ...newProduct });
   }
+
+  static async read(_req: Request, res: Response) {
+    const response = await ProductsService.read();
+
+    return res.status(200).json(response);
+  }
 }
 
 export default ProductsController;
