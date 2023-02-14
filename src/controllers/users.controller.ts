@@ -3,7 +3,7 @@ import index from '../services';
 
 const { UsersService } = index;
 
-class ProductsController {
+class UsersController {
   static async create(req: Request, res: Response) {
     const newUser = req.body;
 
@@ -13,4 +13,4 @@ class ProductsController {
   }
 }
 
-export default ProductsController;
+export default UsersController;
