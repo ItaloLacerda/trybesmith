@@ -4,7 +4,7 @@ import jwt from '../utils/jsonWebToken/generateToken';
 
 const { UsersModel } = index;
 
-class ProductsService {
+class UsersService {
   static async create(newUser: Iuser) {
     const userId = await UsersModel.create(newUser);
 
@@ -17,4 +17,4 @@ class ProductsService {
   }
 }
 
-export default ProductsService;
+export default UsersService;
